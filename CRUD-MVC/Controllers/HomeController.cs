@@ -19,7 +19,7 @@ namespace CRUD_MVC.Controllers
             _logger = logger;
             _context = context;
         }
-
+         
         public IActionResult Index()
         {
             var name = _context.sys_makes.Select(q => q.name).FirstOrDefault();
