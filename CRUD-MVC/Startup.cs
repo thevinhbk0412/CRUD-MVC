@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUD.Data.EF;
 using CRUD_MVC.DBContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,10 +31,10 @@ namespace CRUD_MVC
         {
           
             services.AddControllersWithViews();
-            services.AddDbContext<CrudDbContext>(options =>
+            services.AddDbContext<EShopDbContext>(options =>
              options.UseSqlServer(
                  Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<DbContext, CrudDbContext>();
+            services.AddScoped<DbContext, EShopDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
