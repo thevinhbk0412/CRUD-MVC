@@ -14,10 +14,10 @@ namespace CRUD_MVC.DBContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             systemTableBuilder(modelBuilder);
-            OnModelCreatingPartial(modelBuilder);
+            //OnModelCreatingPartial(modelBuilder);
 
         }
       
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
